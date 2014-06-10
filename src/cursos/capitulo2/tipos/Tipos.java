@@ -13,7 +13,9 @@ public class Tipos {
         /*for (int i = 0; i < arreglo1.length ; i++){
             System.out.println(arreglo1[i]);
         }*/
-        
+        for (int x : arreglo1){ //tipo de dato sobre el que se va a iterar, se relaciona al tipo de dato de arreglo
+            System.out.println(x);
+        }
     }
     
 }
