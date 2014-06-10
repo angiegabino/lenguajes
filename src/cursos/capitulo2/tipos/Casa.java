@@ -3,8 +3,9 @@ package cursos.capitulo2.tipos;
 
 
 public class Casa {
-int numCuartos;
-int niveles;
+    static int numAlbercas;
+    int numCuartos;
+    int niveles;
 
     public int getNumCuartos() {
         return numCuartos;
