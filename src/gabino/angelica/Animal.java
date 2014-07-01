@@ -9,7 +9,7 @@ public class Animal {
     private int edad;
     private boolean carnivoro;
     
-    public Animal(int peso){//Consultor 
+    public Animal(int peso){//Constructor 
         this.peso=peso;
     }
     public Animal(String nombre, float peso){//Constructor
