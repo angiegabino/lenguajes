@@ -91,9 +91,10 @@ public class cajero extends javax.swing.JFrame {
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
         try{
             Cuenta c = new Cuenta();
-            c.setSaldo(-200);
-           JTextField Text1 = new javax.swing.JTextField(); 
-            Text1.setText("c"); 
+            c.setSaldo(600);
+           JTextField Text1 = new javax.swing.JTextField();
+           //String saldo="";
+           //Text1.setText(saldo);
             Text2.setText("Saldo suficiente");
            
         }
