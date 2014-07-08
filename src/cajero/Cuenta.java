@@ -14,7 +14,8 @@ public class Cuenta {
 
     public void setSaldo(float saldo) throws SaldoNegativoException {
         if(saldo < 0) throw new SaldoNegativoException();
-        else this.saldo = saldo;
+        else{ this.saldo = saldo; 
+        System.out.println("Saldo suficiente");}
     }
         
     public class SaldoNegativoException extends Exception {

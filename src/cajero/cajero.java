@@ -2,6 +2,7 @@
 package cajero;
 
 import cajero.Cuenta.SaldoNegativoException;
+import javax.swing.JTextField;
 
 /**
  *
@@ -39,6 +40,11 @@ public class cajero extends javax.swing.JFrame {
         Text2.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
 
         Text1.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        Text1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Text1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,14 +93,19 @@ public class cajero extends javax.swing.JFrame {
             Cuenta c = new Cuenta();
             c.setSaldo(-200);
            JTextField Text1 = new javax.swing.JTextField(); 
-           String saldo=""; 
-            Text1.setText(saldo); 
+            Text1.setText("c"); 
+            Text2.setText("Saldo suficiente");
            
         }
         catch (SaldoNegativoException e) {
             Text2.setText(e.getMessage());
+            
         }
     }//GEN-LAST:event_BotonActionPerformed
+
+    private void Text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text1ActionPerformed
+
+    }//GEN-LAST:event_Text1ActionPerformed
 
     
     public static void main(String args[]) {
