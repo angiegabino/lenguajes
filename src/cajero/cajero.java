@@ -93,8 +93,8 @@ public class cajero extends javax.swing.JFrame {
             Cuenta c = new Cuenta();
             c.setSaldo(600);
            JTextField Text1 = new javax.swing.JTextField();
-           //String saldo="";
-           //Text1.setText(saldo);
+            String saldo="";
+           Text1.setText(saldo);
             Text2.setText("Saldo suficiente");
            
         }
