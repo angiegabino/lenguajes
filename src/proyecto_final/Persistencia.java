@@ -39,6 +39,8 @@ public static void guardar(Artista p)throws Exception{
         System.out.println("Guardado");
     }
         
-    
+  //   public static Artista buscarPorid(){
+  
+  //}
     
 }

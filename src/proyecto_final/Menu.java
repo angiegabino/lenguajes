@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Angie
@@ -249,20 +250,21 @@ public class Menu extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        /*int tamaño = 20;
+        int tamaño = 20;
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [tamaño][5],
+            new Object [tamaño][4],
             new String [] {
-                "ID", "Nombre del usuario", "Sueldo del usuario"
+                "ID", "Artista", "Cancion","Album"
             }
         ));
 
         //El siguiente paso es agregar los elementos del ArrayList de los usuarios de mi tabla
-        jTable1.setValueAt("Angelica", 3, 1);
+        jTable1.setValueAt(tamaño, WIDTH, tamaño);
+        
 
         //El siguiente paso es agregar los elementos del ArrayList de los usuarios de mi tabla
-        */
          try {
+             
 
             ArrayList<Contenido> contenidos = new ArrayList<Contenido>();
             //Contenido co1 = new Contenido(Integer.parseInt(jTextField1.getText()),jTextField2.getText(),jTextField3.getText()),jTextField4.getText(), jTextField5.getText(),(Integer.parseInt(jTextField6.getText()));

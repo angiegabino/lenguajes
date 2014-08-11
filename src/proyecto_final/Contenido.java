@@ -10,22 +10,21 @@ public class Contenido implements Serializable  {
     private String nombre;
     private String cancion;
     private String album;
-    private int año;
-
+ 
     @Override
     public String toString() {
-        return "Contenido{" + "id=" + id + ", nombre=" + nombre + ", cancion=" + cancion + ", album=" + album + ", a\u00f1o=" + año + '}';
-    }
-
-    public Contenido() {
+        return "Contenido{" + "id=" + id + ", nombre=" + nombre + ", cancion=" + cancion + ", album=" + album + '}';
     }
     
+    public Contenido() {
+    }
+
     public Contenido(int id, String nombre, String cancion, String album, int año) {
         this.id = id;
         this.nombre = nombre;
         this.cancion = cancion;
         this.album = album;
-        this.año = año;
+       
     }
 
     public int getId() {
@@ -59,12 +58,5 @@ public class Contenido implements Serializable  {
     public void setAlbum(String album) {
         this.album = album;
     }
-
-    public int getAño() {
-        return año;
-    }
-
-    public void setAño(int año) {
-        this.año = año;
-    }
+  
 }
