@@ -2,6 +2,8 @@
 
 package proyecto_final;
 import java.io.*; //Paquete que ayuda a guardar 
+import java.io.File;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,43 +13,31 @@ import java.io.*; //Paquete que ayuda a guardar
 
 public class Persistencia {
     
-    Cuenta c ;
+ public synchronized static ArrayList<Artista> leer()throws Exception{
+   File file = new File("Artista.menu");    
+ 
+   FileInputStream fis = new FileInputStream(file);
+   ObjectInputStream ois = new ObjectInputStream(fis);
+   ArrayList<Artista> p = (ArrayList<Artista>) ois.readObject();
+   ois.close();
+   return p;
+   }
     
-    //Método que va a guardar una cuenta 
-    public void guardar(Cuenta c){
-        try {
-            //Paso 1 para guardar: Creamos el archivo físico
-            File f = new File ("Archivo.ext");
-            //Encadenamos el archivo a la salida
-            FileOutputStream fos = new FileOutputStream(f);
-            //Creamos el objeto a serializar 
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(c);
-            System.out.println("Guardado con exito!!");
+public static void guardar(Artista p)throws Exception{
+       
+        ArrayList artistas = new ArrayList<Artista>();
+        File file = new File("Artista.menu");    
+        if(file.exists()){
+        artistas =  leer();
         }
-        catch (Exception e){
-            System.out.println(e.getMessage());
-        }
+         
+        FileOutputStream fis = new FileOutputStream(file);
+        ObjectOutputStream ois = new ObjectOutputStream(fis);
+        artistas.add(p);
+        ois.writeObject(artistas); 
+        ois.close();
+        System.out.println("Guardado");
     }
-    
-    public Cuenta leer(){
-    Cuenta c = new Cuenta(); //Referencia, no objeto
-    try{
-        //Para leer un archivo casi son los mismos pasos
-        //Paso 1: Abrir el archivo a leer
-        File f = new File ("Archivo.ext");
-        //Paso 2: El siguiente renglón indica que el archivo se leerá 
-        FileInputStream fis = new FileInputStream(f); //Entra el archivo
-        //Paso 3: Leemos el contenido
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        c = (Cuenta) ois.readObject(); //Casting
-    }
-    
-    catch(Exception e){
-        
-    }
-    return c;
-}
         
     
     
